@@ -1,0 +1,14 @@
+<div class="root-container">
+    <app-top-nav (sidenavToggle)="sidenav.toggle()"></app-top-nav>
+    <mat-sidenav-container fxFlexFill>
+        <mat-sidenav #sidenav fxHide.gt-sm>
+            <app-side-nav (sidenavClose)="sidenav.close()"></app-side-nav>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill>
+            <router-outlet></router-outlet>
+            <div class="bottom-nav">
+                <app-bottom-nav #bottomnav fxHide.gt-sm></app-bottom-nav>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

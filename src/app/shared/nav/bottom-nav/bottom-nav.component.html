@@ -1,0 +1,5 @@
+<mat-toolbar color="primary" fxLayout>
+    <button *ngFor="let item of navItems" class="bottom-nav-item-space" mat-icon-button routerLink="{{item.route}}">
+        <mat-icon>{{item.iconName}}</mat-icon>
+    </button>
+</mat-toolbar>
